@@ -13,7 +13,7 @@ export default function Home() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ animal: animalInput }),
+      body: JSON.stringify({ prompt: animalInput }),
     });
     const data = await response.json();
     setResult(data.result);
@@ -23,18 +23,19 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>OpenAI Quickstart</title>
+        <title>Fuck Standardisation</title>
         <link rel="icon" href="/dog.png" />
       </Head>
 
       <main className={styles.main}>
         <img src="/dog.png" className={styles.icon} />
-        <h3>Name my pet</h3>
+        <h3>Fuck Standardisation</h3>
+        <h4>Because we were destined for more than just simple regurgitation</h4>
         <form onSubmit={onSubmit}>
           <input
             type="text"
             name="animal"
-            placeholder="Enter an animal"
+            placeholder="You are amazing."
             value={animalInput}
             onChange={(e) => setAnimalInput(e.target.value)}
           />
